@@ -22,7 +22,7 @@ resource "random_string" "suffix" {
 
 provider "google" {
   version = "~> 3.16.0"
-  project = var.project_ids[2]
+  project = var.project_id
 }
 
 resource "google_compute_network" "main" {

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-variable "project_ids" {
-  type        = list(string)
+variable "project_id" {
+  type        = string
   description = "The GCP projects to use for integration tests"
 }
 

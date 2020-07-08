@@ -15,13 +15,13 @@
  */
 
 data "google_project" "project" {
-  project_id = var.project_ids[2]
+  project_id = var.project_id
 }
 
 module "example" {
   source = "../../../examples/simple_zonal_with_asm"
 
-  project_id          = var.project_ids[2]
+  project_id          = var.project_id
   cluster_name_suffix = "-${random_string.suffix.result}"
   region              = var.region
   zones               = slice(var.zones, 0, 1)
